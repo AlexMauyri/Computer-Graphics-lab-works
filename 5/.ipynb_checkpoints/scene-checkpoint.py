@@ -78,10 +78,10 @@ class Scene:
         x = np.array([model.v[polygon[i]][1] for i in range(len(polygon))])
         z = np.array([model.v[polygon[i]][2] for i in range(len(polygon))])
         
-        xmin = max(int(min(x)), 0)
-        xmax = min(int(max(x)), self.width - 1)
         ymin = max(int(min(y)), 0)
         ymax = min(int(max(y)), self.width - 1)
+        xmin = max(int(min(x)), 0)
+        xmax = min(int(max(x)), self.height - 1)
     
         uv = np.array([[model.vt[face[j, 1]][i] for j in range(len(polygon))] for i in range(2)])
 
